@@ -1,9 +1,16 @@
+**Testing Condition**
 
-## Copy data into redshift from S3
+| Node type | Initilal Data | Data Change | Manual Snapshot |
+| --------- | ------------- | ----------- | --------------- |
+| Inst1     | 10G           | N           | N               |
+| Inst2     | 10G           | N           | Y               |
+| Inst3     | 10G           | Y           | N               |
+| Inst4     | 10G           | Y           | Y               |
 
-| Node type | # of Nodes | # of Files | Total Filesize | Total Rownum | DIST Key | Sort key | Elapsed Time |
-| --------- | ---------- | ---------- | -------------- | ------------ | -------- | -------- | ------------ |
-|Inst1   | Data Size 10G          | 1          | 1.8G           | 9937969      | N/A      | N/A      | 44 sec       |
-| dc2.large | 8          | 2          | 1.8G           | 9937969      | N/A      | N/A      | 22 sec       |
-| dc2.large | 8          | 4          | 1.8G           | 9937969      | N/A      | N/A      | 12 sec       |
-| dc2.large | 8          | 12         | 1.8G           | 9937969      | N/A      | N/A      | 9 sec        |
+**RDS Aurora MYSQL dump import with ERROR 1227**
+
+Need to remove
+
+For a logical backup taken via mysqldump, ensure that the "SET @@GLOBAL" and the "SET @@SESSION" lines are removed from the dump file [1] [2]. After removing these lines you may then proceed to import the dump file to the target RDS instance.
+[1] - https://bugs.mysql.com/bug.php?id=77845
+[2] - http://www.ducea.com/2007/07/25/dumping-mysql-stored-procedures-functions-and-triggers/
