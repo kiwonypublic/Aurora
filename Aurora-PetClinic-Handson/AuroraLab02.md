@@ -6,15 +6,15 @@
 
 2. "Start Session"을 Click
 
-<kbd> ![GitHub Logo](images/1-start-session.png) </kbd>
+<kbd> ![GitHub Logo](images/6.png) </kbd>
 
 3. `auroralab-mysql-workstation`을 선택한 후 "Start Session"을 Click
 
-<kbd> ![GitHub Logo](images/1-connect-session.png) </kbd>
+<kbd> ![GitHub Logo](images/7.png) </kbd>
 
 4. Terminal 이 뜨면 `sudo su -l ubuntu`를 통해 ssm-user에서 ubuntu User로 Switching.(항상 ubuntu User로 작업을 해야 합니다.)
 
-<kbd> ![GitHub Logo](images/1-terminal-sudo.png) </kbd>
+<kbd> ![GitHub Logo](images/8.png) </kbd>
 
 5. `tail -n1 /debug.log`를 확인하여 다음의 Log가 있는지 확인
 
@@ -26,7 +26,7 @@
 
 **COMMAND & Output Example**
 
-<kbd> ![GitHub Logo](images/1-connection-check2.png) </kbd>
+<kbd> ![GitHub Logo](images/9.png) </kbd>
 
 **앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
 **Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
