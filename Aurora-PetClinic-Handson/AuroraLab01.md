@@ -15,7 +15,7 @@
 
 4. "I acknowledge that AWS CloudFormation might create IAM resources with custom names"를 Check 하고 "Create Stack" Click
 
-<kbd> ![GitHub Logo](images/2-create-stack-confirm.png) </kbd>
+<kbd> ![GitHub Logo](images/3.png) </kbd>
 
 5. Stack 생성에 약 15-20분 정도 소요 됩니다.
 
@@ -23,11 +23,11 @@
 
 7. 아래 화면처럼 Stack Resource가 "CREATE_COMPLETE"가 되면 환경 구성이 완료된 것입니다.
 
-<kbd> ![GitHub Logo](images/2-stack-status.png) </kbd>
+<kbd> ![GitHub Logo](images/4.png) </kbd>
 
 8. Stack 생성이 완료되면 Outputs Tab을 Click하고, KEY와 Value를 별도의 엑셀에 복사해둡니다. (이후 Step에서 사용됨)
 
-<kbd> ![GitHub Logo](images/2-stack-outputs.png) </kbd>
+<kbd> ![GitHub Logo](images/5.png) </kbd>
 
 9. BastionInstance 항목에 `i-0123456789abcdef0` 형태의 Instance ID가 존재하는지 확인하세요.
 
