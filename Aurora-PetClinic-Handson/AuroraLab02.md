@@ -37,15 +37,24 @@ ubuntu@ip-172-31-0-217:~$ sudo apt-get install openjdk-11-jdk -y
 8. petclinic git repository를 clone 합니다.
 
 ```
-ubuntu@ip-172-31-0-217:~$ git clone  https://github.com/kiwonyoon0701/spring-petclinic.git
+ubuntu@ip-172-31-0-217:~$ git clone https://github.com/kiwonyoon0701/spring-petclinic.git
 ubuntu@ip-172-31-0-217:~$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/m2.tar.Z
 ubuntu@ip-172-31-0-217:~$ tar xvfz m2.tar.Z
 ubuntu@ip-172-31-0-217:~$ cd spring-petclinic/
 ubuntu@ip-172-31-0-217:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
+```
+
+9. EC2의 Public IP 를 확인하고, PetClinic application을 실행 후 접속 테스트를 진행합니다.
+
+```
+ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $1 "\n" }'
+52.79.61.11
+ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar
 
 ```
 
-https://github.com/kiwonyoon0701/spring-petclinic.git
+10. Browser에서 http://EC2-PublicIP:8080 으로 접속합니다.
+    <kbd> ![GitHub Logo](images/10.png) </kbd>
 
 **앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
 **Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
