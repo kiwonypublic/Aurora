@@ -9,9 +9,9 @@
 
 <kbd> ![GitHub Logo](images/2.png) </kbd>
 
-3. 다음의 주소를 복사해서 Browser의 새 창에 Copy and Paste합니다.
+3. 다음의 주소를 복사해서 Browser의 새 창에 Copy and Paste합니다. Aurora Cluster는 수동으로 생성하겠습니다.
 
-`https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/create/review?stackName=auroralab&templateURL=https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/lab_template.yml&param_deployCluster=No`
+`https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/create/review?stackName=auroralab&templateURL=https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/lab_template.yml&param_deployCluster=Yes`
 
 4. "I acknowledge that AWS CloudFormation might create IAM resources with custom names"를 Check 하고 "Create Stack" Click
 
