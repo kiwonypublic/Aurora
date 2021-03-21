@@ -28,9 +28,6 @@
 
 <kbd> ![GitHub Logo](images/9.png) </kbd>
 
-**앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
-**Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
-
 7. Install JDK 11
 
 ```
@@ -38,6 +35,19 @@ ubuntu@ip-172-31-0-217:~$ sudo apt-get install openjdk-11-jdk -y
 ```
 
 8. petclinic git repository를 clone 합니다.
-   https://github.com/kiwonyoon0701/spring-petclinic.git
+
+```
+ubuntu@ip-172-31-0-217:~$ git clone  https://github.com/kiwonyoon0701/spring-petclinic.git
+ubuntu@ip-172-31-0-217:~$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/m2.tar.Z
+ubuntu@ip-172-31-0-217:~$ tar xvfz m2.tar.Z
+ubuntu@ip-172-31-0-217:~$ cd spring-petclinic/
+ubuntu@ip-172-31-0-217:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
+
+```
+
+https://github.com/kiwonyoon0701/spring-petclinic.git
+
+**앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
+**Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
 
 9. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)
