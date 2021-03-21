@@ -20,7 +20,7 @@
 
 `* bootstrap complete, rebooting`
 
-6. mysql client를 사용해서 aurora instance로 접속을 확인합니다. [clusterEndpoint]는 Lab01에서 복사해둔 CloudFomration Output에서 확인 할 수 있습니다.
+6. mysql client를 사용해서 aurora instance로 접속을 확인합니다. [clusterEndpoint]는 Lab01에서 복사해둔 CloudFormation Output에서 확인 할 수 있습니다.
 
 `mysql -h[clusterEndpoint] -u$DBUSER -p"$DBPASS" -e"SELECT @@aurora_version;"`
 
@@ -31,4 +31,13 @@
 **앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
 **Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
 
-7. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)
+7. Install JDK 11
+
+```
+ubuntu@ip-172-31-0-217:~$ sudo apt-get install openjdk-11-jdk -y
+```
+
+8. petclinic git repository를 clone 합니다.
+   https://github.com/kiwonyoon0701/spring-petclinic.git
+
+9. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)
