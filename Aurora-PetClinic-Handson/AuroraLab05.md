@@ -37,7 +37,7 @@ sleep 1
 done
 ```
 
-    <kbd> ![GitHub Logo](images/43.png) </kbd>
+<kbd> ![GitHub Logo](images/43.png) </kbd>
 
 7. Aurora DB를 장애 상황을 가정하고 Failover 실행. Services => RDS => Databases
 
@@ -58,3 +58,5 @@ done
 
 13. PetClinic application 정상 동작 확인
     <kbd> ![GitHub Logo](images/49.png) </kbd>
+
+14. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab06.md](AuroraLab06.md)
