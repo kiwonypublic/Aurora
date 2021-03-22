@@ -20,6 +20,15 @@
 
 `* bootstrap complete, rebooting`
 
+6. `env |grep DB`를 확인하여 DB master user name과 password를 확인 합니다.
+
+```
+ubuntu@ip-172-31-0-183:~$ env |grep DB
+DBUSER=masteruser
+DBPASS=tbU642-*Y.
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+```
+
 6. mysql client를 사용해서 aurora instance로 접속을 확인합니다. [clusterEndpoint]는 Lab01에서 복사해둔 CloudFormation Output에서 확인 할 수 있습니다.
 
 ```
@@ -63,7 +72,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar
 
 ```
 
-10. Browser에서 http://EC2-PublicIP:8080 으로 접속합니다.
+10. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>
 
 11. "Find OWNERS"를 Click 후 "Add Owner"를 Click하여 신규 고객 정보를 입력합니다. (Data는 내장 H2 DB에 저장됩니다.)

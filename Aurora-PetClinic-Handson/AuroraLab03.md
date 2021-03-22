@@ -1,4 +1,4 @@
-# Session Manager를 이용해서 EC2 인스턴스에 접속
+# PetClinic에서 사용하는 Repository를 Aurora MySQL로 변경합니다.
 
 1. 다음 directory로 이동합니다.
 
@@ -11,7 +11,7 @@ data.sql  petclinic_db_setup_mysql.txt  schema.sql  user.sql
 
 2. cat으로 user.sql, schema.sql, data.sql을 살펴 봅니다.
 
-3. petclinic DB를 생성하는 script를 실행합니다.
+3. petclinic DB를 생성하는 script를 실행합니다. `mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql`
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
