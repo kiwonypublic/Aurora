@@ -18,10 +18,8 @@
 <kbd> ![GitHub Logo](images/3.png) </kbd>
 
 5. CloudFormation의 "Event" Tab에서 진행 상황을 확인 할 수 있습니다. Event를 Refresh하면서 어떤 Resource들이 Provisioning 되는지 확인합니다.
-
-5-1. Resources Tab을 누르면 CloudFormation Template에서 만들고 있는 Resource들의 상태를 확인 할 수 있습니다.
-
-5-2. Outputs Tab을 누르면 Stack 생성이 완료 된 후 설정해둔 정보들을 쉽게 확인 가능합니다.
+   Resources Tab을 누르면 CloudFormation Template에서 만들고 있는 Resource들의 상태를 확인 할 수 있습니다.
+   Outputs Tab을 누르면 Stack 생성이 완료 된 후 설정해둔 정보들을 쉽게 확인 가능합니다.
 
 6. Stack 생성까지 10분정도가 걸립니다.
 
