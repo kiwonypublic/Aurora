@@ -153,7 +153,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profi
 11. Application 접속 및 DB 내용 확인 http://EC2-Public-IP:8080
     <kbd> ![GitHub Logo](images/16.png) </kbd>
 
-내장 H2 DB에 저장했던 최초 Owner Data와 Pet Data가 없음을 확인합니다.
+내장 H2 DB에 저장했던 최초 Owner Data와 Pet Data가 없음을 확인합니다. PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.
 
 12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
     <kbd> ![GitHub Logo](images/17.png) </kbd>
@@ -196,43 +196,10 @@ mysql> select id, name, type_id from pets where owner_id=11;
 1 row in set (0.00 sec)
 ```
 
-14. mysqldump로 현재 Data를 backup 받습니다.(이후 Aurora Serverless에서 사용합니다.)
+14. 몇개의 Data를 추가로 넣고 DB에서 조회해 봅니다.
 
-```
-ubuntu@ip-172-31-0-145:~$ mysqldump --column-statistics=0 -h$DBURL -upetclinic -ppetclinic petclinic > petclinic-backup.sql
-```
+    <kbd> ![GitHub Logo](images/25.png) </kbd>
 
-14. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+15. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
-```
-ubuntu@ip-172-31-0-145:~$  mysql -h$DBURL -u$DBUSER -p"$DBPASS"
-mysql> use petclinic;
-
-DELIMITER $$
-DROP PROCEDURE IF EXISTS minute_rollup$$
-CREATE PROCEDURE minute_rollup(input_number INT)
-BEGIN
- DECLARE counter int;
- DECLARE out_number float;
- set counter=0;
- WHILE counter <= input_number DO
- SET out_number=SQRT(rand());
- SET counter = counter + 1;
-END WHILE;
-END$$
-DELIMITER ;
-
-DROP TABLE IF EXISTS `sbtest1`;
-CREATE TABLE `sbtest1` (
- `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
- `k` int(10) unsigned NOT NULL DEFAULT '0',
- `c` char(120) NOT NULL DEFAULT '',
- `pad` char(60) NOT NULL DEFAULT '',
-PRIMARY KEY (`id`),
-KEY `k_1` (`k`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-```
-
-15. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab04.md](AuroraLab04.md)
+16. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab04.md](AuroraLab04.md)
