@@ -140,7 +140,7 @@ ubuntu@ip-172-31-0-183:~$ cd spring-petclinic/
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 ```
 
-3. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Pets 항목이 모두 삭제 된것을 확인)
+3. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Onwers 11,12,13의 Pets 항목이 모두 삭제 된것을 확인)
 
    <kbd> ![GitHub Logo](images/32.png) </kbd>
 
@@ -153,6 +153,10 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 5. Backtrack을 사용하여 Pets 데이터가 삭제 되기 이전 상태로 DB를 되돌립니다.
 
 ```
+aws rds backtrack-db-cluster \
+--db-cluster-identifier auroralab-mysql-cluster \
+--backtrack-to "2021-03-22T14:13:37Z
+
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
 > --db-cluster-identifier auroralab-mysql-cluster \
 > --backtrack-to "2021-03-22T14:13:37Z"
@@ -163,9 +167,7 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
     "BacktrackRequestCreationTime": "2021-03-22T14:21:25.104Z",
     "Status": "PENDING"
 }
-aws rds backtrack-db-cluster \
---db-cluster-identifier auroralab-mysql-cluster \
---backtrack-to "2021-03-22T14:13:37Z"
+"
 ```
 
 6. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 몇 분 정도 소요됩니다.)
