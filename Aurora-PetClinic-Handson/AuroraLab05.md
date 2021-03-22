@@ -55,3 +55,6 @@ done
 
 12. auroralab-mysql-reader1 이 Write 역할로 Failover
     <kbd> ![GitHub Logo](images/48.png) </kbd>
+
+13. PetClinic application 정상 동작 확인
+    <kbd> ![GitHub Logo](images/49.png) </kbd>
