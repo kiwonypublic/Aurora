@@ -141,6 +141,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 >
 ```
 
+    <kbd> ![GitHub Logo](images/16.png) </kbd>
+
 10. rebuild and run application
 
 ```
