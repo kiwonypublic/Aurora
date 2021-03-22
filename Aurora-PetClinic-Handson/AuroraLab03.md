@@ -129,7 +129,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
     </dependency>
 ```
 
-    <kbd> ![GitHub Logo](images/24.png) </kbd>
+<kbd> ![GitHub Logo](images/24.png) </kbd>
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ vi pom.xml
