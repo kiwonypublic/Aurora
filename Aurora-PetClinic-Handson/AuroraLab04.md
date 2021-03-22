@@ -1,6 +1,6 @@
-# Aurora Serverless 를 petclinic의 repository로 사용
+# Aurora의 다양한 기능을 살펴 봅니다.
 
-1. Services => RDS => Databases 로 이동
+## Automatic Backup & Manual Backup
 
 2. auroralab-mysql-node-1 선택 후 Actions => Take Snapshot
 
@@ -12,3 +12,5 @@
 
 4. Backup Snapshot 선택 후 "Restore snapshot 수행"
    <kbd> ![GitHub Logo](images/24.png) </kbd>
+
+5.
