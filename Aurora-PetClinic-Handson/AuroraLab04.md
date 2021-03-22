@@ -209,3 +209,7 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 <kbd> ![GitHub Logo](images/36.png) </kbd>
 
 <kbd> ![GitHub Logo](images/37.png) </kbd>
+
+9. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+
+10. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab05.md](AuroraLab05.md)
