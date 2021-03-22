@@ -46,3 +46,12 @@ done
 
 9. Failover Click
    <kbd> ![GitHub Logo](images/45.png) </kbd>
+
+10. Cluster에서 Failover 가 동작 확인
+    <kbd> ![GitHub Logo](images/46.png) </kbd>
+
+11. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인
+    <kbd> ![GitHub Logo](images/47.png) </kbd>
+
+12. auroralab-mysql-reader1 이 Write 역할로 Failover
+    <kbd> ![GitHub Logo](images/48.png) </kbd>
