@@ -119,7 +119,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 
 9. edit pom.xml
 
-~/spring-petclinic/pom.xml에 "<!-- cahcing -->"
+~/spring-petclinic/pom.xml에 `<!-- cahcing -->` 위에 아래 5줄을 추가합니다.
 
 ```
     <dependency>
@@ -127,7 +127,9 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
       <artifactId>mariadb-java-client</artifactId>
       <version>2.5.4</version>
     </dependency>
+```
 
+```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ vi pom.xml
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 84a85,90
