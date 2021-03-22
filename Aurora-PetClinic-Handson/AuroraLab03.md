@@ -41,7 +41,7 @@ ubuntu@ip-172-31-0-145:~$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" -e "GRANT SELECT,
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
 
-1. petclinic user를 이용하여 schema를 생성합니다.
+5. petclinic user를 이용하여 schema를 생성합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
@@ -97,6 +97,15 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp src/main/resources/application.pro
 
 8. Edit configuration files
 
+~/spring-petclinic/src/main/resources/application.properties 파일에 아래 4 line을 추가합니다.(datasource.url을 환경에 맞게 변경해서 입력)
+
+```
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.ap-northeast-2.rds.amazonaws.com:3306/petclinic
+spring.datasource.username=petclinic
+spring.datasource.password=petclinic
+```
+
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ vi src/main/resources/application.properties
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties src/main/resources/application.properties
@@ -109,6 +118,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 ```
 
 9. edit pom.xml
+
+~/spring-petclinic/pom.xml에 "<!-- cahcing -->"
 
 ```
     <dependency>
