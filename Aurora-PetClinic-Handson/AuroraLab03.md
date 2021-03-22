@@ -129,6 +129,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
     </dependency>
 ```
 
+    <kbd> ![GitHub Logo](images/24.png) </kbd>
+
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ vi pom.xml
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
@@ -140,8 +142,6 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 >     </dependency>
 >
 ```
-
-    <kbd> ![GitHub Logo](images/16.png) </kbd>
 
 10. rebuild and run application
 
