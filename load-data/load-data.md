@@ -532,7 +532,7 @@ Finished parallel loading of 9999999 rows in 39.44 seconds
 
 <kbd> ![GitHub Logo](images/3.png) </kbd>
 
-**load from s3**
+**load from s3 degree 1**
 
 ```
 mysql> load data from s3 's3://bike-test-kiwony/dummy_data.csv' into table test_load fields terminated by ','  lines terminated by '\n' ;
@@ -546,7 +546,7 @@ Records: 9999999  Deleted: 0  Skipped: 0  Warnings: 19999998
 
 <kbd> ![GitHub Logo](images/4.png) </kbd>
 
-**load from s3 parallel4**
+**load from s3 degree 4**
 
 ```
 ubuntu@ip-172-31-31-236:~$ split -l 2500000 dummy_data.csv dummy_data_
@@ -634,3 +634,47 @@ Records: 1249999  Deleted: 0  Skipped: 0  Warnings: 2499998
 <kbd> ![GitHub Logo](images/11.png) </kbd>
 
 <kbd> ![GitHub Logo](images/12.png) </kbd>
+
+## innodb_autoinc_lock_mode=2
+
+**load from s3 degree 1**
+
+```
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data.csv' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 9999999 rows affected, 65535 warnings (1 min 22.58 sec)
+Records: 9999999  Deleted: 0  Skipped: 0  Warnings: 19999998
+
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data.csv' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 9999999 rows affected, 65535 warnings (1 min 20.73 sec)
+Records: 9999999  Deleted: 0  Skipped: 0  Warnings: 19999998
+
+```
+
+**load from s3 degree 4**
+
+```
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_aa' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 2500000 rows affected, 65535 warnings (35.81 sec)
+Records: 2500000  Deleted: 0  Skipped: 0  Warnings: 5000000
+...
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_ad' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 2499999 rows affected, 65535 warnings (37.07 sec)
+Records: 2499999  Deleted: 0  Skipped: 0  Warnings: 4999998
+
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_aa' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 2500000 rows affected, 65535 warnings (37.25 sec)
+Records: 2500000  Deleted: 0  Skipped: 0  Warnings: 5000000
+...
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_ad' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 2499999 rows affected, 65535 warnings (37.47 sec)
+Records: 2499999  Deleted: 0  Skipped: 0  Warnings: 4999998
+
+```
+
+<kbd> ![GitHub Logo](images/13.png) </kbd>
+
+**load from s3 degree 8**
+
+```
+
+```
