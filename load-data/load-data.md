@@ -38,6 +38,18 @@ birth_year CHAR(200),
 gender CHAR(200)
 );
 
+mysql> desc test_load;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(45) | NO   |     | NULL    |                |
+| last_name  | varchar(45) | NO   |     | NULL    |                |
+| age        | varchar(3)  | NO   |     | NULL    |                |
+| email      | varchar(45) | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
 
 
 mysql> SHOW GLOBAL VARIABLES LIKE 'local_infile';
@@ -401,6 +413,25 @@ else:
     print("Finished single-threaded loading of {} rows in {} seconds".format(total_rows, total_duration))
 ```
 
+**test_db test_load table**
+
+```
+CREATE DATABASE  IF NOT EXISTS `test_db` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+USE `test_db`;
+
+DROP TABLE IF EXISTS `test_load`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `test_load` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) COLLATE utf8_bin NOT NULL,
+  `last_name` varchar(45) COLLATE utf8_bin NOT NULL,
+  `age` varchar(3) COLLATE utf8_bin NOT NULL,
+  `email` varchar(45) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+```
+
 **Table Size & ROW count : 400MB, 1000,0000rows**
 
 ```
@@ -676,5 +707,21 @@ Records: 2499999  Deleted: 0  Skipped: 0  Warnings: 4999998
 **load from s3 degree 8**
 
 ```
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_8_aa' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 1250000 rows affected, 65535 warnings (32.87 sec)
+Records: 1250000  Deleted: 0  Skipped: 0  Warnings: 2500000
+...
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_8_ah' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 1249999 rows affected, 65535 warnings (33.07 sec)
+Records: 1249999  Deleted: 0  Skipped: 0  Warnings: 2499998
+
+
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_8_aa' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 1250000 rows affected, 65535 warnings (31.55 sec)
+Records: 1250000  Deleted: 0  Skipped: 0  Warnings: 2500000
+...
+mysql> load data from s3 's3://bike-test-kiwony/dummy_data_8_ah' into table test_load fields terminated by ','  lines terminated by '\n' ;
+Query OK, 1249999 rows affected, 65535 warnings (32.66 sec)
+Records: 1249999  Deleted: 0  Skipped: 0  Warnings: 2499998
 
 ```
