@@ -1,3 +1,8 @@
+## Test Environment
+
+Aurora MySQL57 db.r5.2xlarge
+ubuntu1804 m5.2xlarge
+
 ```
 ubuntu@ip-172-31-31-236:~/bike$ cat /tmp/bike.csv |wc -l
 5562329
@@ -265,7 +270,7 @@ ubuntu@ip-172-31-31-236:~/filecleaver$ sudo python3 setup.py install
 **mysql_parallel_load.py**
 
 ```
-ubuntu@ip-172-31-31-236:~/random_utils/mysql_parallel_load$ pip3 install mysql-connector
+ubuntu@ip-172-31-31-236:~$ sudo pip3 install mysql-connector
 ```
 
 ```
