@@ -324,7 +324,7 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
 <     </dependency
 ```
 
-10. rebuild and run application
+10. Package를 다시 Rebuild해서 PetClinic이 Local H2 DB대신 Aurora MySQL 을 사용하도록 합니다. 이후 Application을 실행합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
