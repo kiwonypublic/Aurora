@@ -53,16 +53,16 @@
 2. Create Clone
 
 ```
-   1. DB instance identifier : clone-fin
+   1. DB instance identifier : clone-finance
    2. 나머지는 Default value 사용
    3. "Create clone" click
 ```
 
-3. clone-fin-cluster가 생성되는 것을 확인합니다.
+3. clone-finance-cluster가 생성되는 것을 확인합니다.
 
    <kbd> ![GitHub Logo](images/30.png) </kbd>
 
-4. clone-fin cluster와 DB 생성을 확인합니다.
+4. clone-finance cluster와 DB 생성을 확인합니다.
 
    <kbd> ![GitHub Logo](images/31.png) </kbd>
 
