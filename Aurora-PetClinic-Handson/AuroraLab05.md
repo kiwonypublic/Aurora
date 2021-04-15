@@ -20,7 +20,7 @@
 
     <kbd> ![GitHub Logo](images/42.png) </kbd>
 
-5.  curl을 이용하여 PetClinic API를 계속 호출
+5.  curl을 이용하여 PetClinic의 Owner 정보 요청 API를 계속 호출합니다. IP는 앞에서 확인한 EC2 Public IP로 변환해서 실행합니다.
 
 ```
 while true
