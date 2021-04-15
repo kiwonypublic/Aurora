@@ -248,6 +248,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp src/main/resources/application.pro
 
 ~/spring-petclinic/src/main/resources/application.properties 파일에 아래 4 line을 추가합니다.(datasource.url을 환경에 맞게 변경해서 입력)
 
+---
+
 **실행 Command**
 
 ```
@@ -258,6 +260,8 @@ spring.datasource.username=petclinic
 spring.datasource.password=petclinic
 ' >> ~/spring-petclinic/src/main/resources/application.properties
 ```
+
+---
 
 **실행 Example**
 
