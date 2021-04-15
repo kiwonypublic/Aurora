@@ -373,22 +373,23 @@ mysql> select id,first_name,last_name from owners order by 1;
 |  9 | David      | Schroeder |
 | 10 | Carlos     | Estaban   |
 | 11 | aurora     | mysql     |
+| 12 | Gildong    | Hong      |
+| 13 | Elsa       | Ice       |
 +----+------------+-----------+
-11 rows in set (0.01 sec)
+13 rows in set (0.00 sec)
 
-mysql> select id, name, type_id from pets where owner_id=11;
-+----+----------------+---------+
-| id | name           | type_id |
-+----+----------------+---------+
-| 14 | RDS-Aurora-DOG |       2 |
-+----+----------------+---------+
-1 row in set (0.00 sec)
+mysql> select id, name, type_id from pets where owner_id in (11,12,13);
++----+-------------------+---------+
+| id | name              | type_id |
++----+-------------------+---------+
+| 14 | rds-aurora-dog    |       2 |
+| 15 | Gildong-Pet       |       5 |
+| 16 | Gildong-Pet-Dog01 |       2 |
+| 18 | Olaf              |       4 |
++----+-------------------+---------+
+4 rows in set (0.00 sec)
 ```
 
-14. 몇개의 Data를 추가로 넣고 DB에서 조회해 봅니다.
-
-    <kbd> ![GitHub Logo](images/25.png) </kbd>
-
-15. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+<kbd> ![GitHub Logo](images/25.png) </kbd>
 
 16. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab04.md](AuroraLab04.md)
