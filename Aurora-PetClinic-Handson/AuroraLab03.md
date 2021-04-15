@@ -341,7 +341,9 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
 **PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.**
 
-12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.(3개의 Onwer과 Owner별 각각의 Pet 정보를 입력합니다.)
+12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
+
+**(3개의 Onwer과 Owner별 각각의 Pet 정보를 입력합니다.)**
 
     <kbd> ![GitHub Logo](images/17.png) </kbd>
 
