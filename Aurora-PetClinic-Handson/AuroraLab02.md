@@ -68,7 +68,7 @@ ubuntu@ip-172-31-0-217:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
 8. PetClinic Application을 기동합니다.
 
 ```
-java -jar target/*.jar
+ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 ```
 
 <kbd> ![GitHub Logo](images/53.png) </kbd>
