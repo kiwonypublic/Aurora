@@ -309,6 +309,20 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 >
 ```
 
+9-1. 이미 수정되어 있는 pom.xml을 다운로드 받습니다.
+
+```
+ubuntu@ip-172-31-0-6:~/spring-petclinic$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/pom.xml -O
+
+ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
+84,88d83
+<     <dependency>
+<       <groupId>org.mariadb.jdbc</groupId>
+<       <artifactId>mariadb-java-client</artifactId>
+<       <version>2.5.4</version>
+<     </dependency
+```
+
 10. rebuild and run application
 
 ```
