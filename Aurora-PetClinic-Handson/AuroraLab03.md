@@ -341,7 +341,8 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
 **PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.**
 
-12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
+12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.(3개의 Onwer과 Owner별 각각의 Pet 정보를 입력합니다.)
+
     <kbd> ![GitHub Logo](images/17.png) </kbd>
 
     <kbd> ![GitHub Logo](images/18.png) </kbd>
@@ -350,7 +351,9 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
     <kbd> ![GitHub Logo](images/20.png) </kbd>
 
-13. Aurora MySQL에 접속하여 입력한 정보들이 DB에 저장되었는지 확인 합니다.
+13. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+
+14. 새로운 Aurora MySQL에 접속하여 입력한 정보들이 DB에 저장되었는지 확인 합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ mysql -h$DBURL -upetclinic -ppetclinic
