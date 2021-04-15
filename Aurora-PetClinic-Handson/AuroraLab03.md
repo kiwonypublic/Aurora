@@ -345,13 +345,13 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
 **(3개의 Onwer과 Owner별 각각의 Pet 정보를 입력합니다.)**
 
-    <kbd> ![GitHub Logo](images/17.png) </kbd>
+<kbd> ![GitHub Logo](images/17.png) </kbd>
 
-    <kbd> ![GitHub Logo](images/18.png) </kbd>
+<kbd> ![GitHub Logo](images/18.png) </kbd>
 
-    <kbd> ![GitHub Logo](images/19.png) </kbd>
+<kbd> ![GitHub Logo](images/19.png) </kbd>
 
-    <kbd> ![GitHub Logo](images/20.png) </kbd>
+<kbd> ![GitHub Logo](images/20.png) </kbd>
 
 13. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
