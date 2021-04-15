@@ -23,18 +23,20 @@
 
    Outputs Tab을 누르면 Stack 생성이 완료 된 후 설정해둔 정보들을 쉽게 확인 가능합니다.
 
-6. Stack 생성까지 10분정도가 걸립니다.
+6. Stack 생성까지 10~20분정도가 걸립니다.
 
-7. 아래 화면처럼 Stack Resource가 "CREATE_COMPLETE"가 되면 환경 구성이 완료된 것입니다.
+7. Stack 생성을 기다리면서 RDS Aurora를 수동으로 만드는 방법을 살펴 보겠습니다.
+
+8. 아래 화면처럼 Stack Resource가 "CREATE_COMPLETE"가 되면 환경 구성이 완료된 것입니다.
 
 <kbd> ![GitHub Logo](images/4.png) </kbd>
 
-8.  Stack 생성이 완료되면 Outputs Tab을 Click하고, KEY와 Value를 별도의 엑셀에 복사해둡니다. (이후 Step에서 사용됨)
+9.  Stack 생성이 완료되면 Outputs Tab을 Click하고, KEY와 Value를 별도의 엑셀에 복사해둡니다. (이후 Step에서 사용됨)
 
 <kbd> ![GitHub Logo](images/5.png) </kbd>
 
-9. ec2Instance 항목에 `i-0123456789abcdef0` 형태의 Instance ID가 존재하는지 확인하세요.
+10. ec2Instance 항목에 `i-0123456789abcdef0` 형태의 Instance ID가 존재하는지 확인하세요.
 
-10. Stack 생성을 기다리면서 RDS Aurora를 수동으로 만드는 방법을 살펴보겠습니다.
+11. Stack 생성을 기다리면서 RDS Aurora를 수동으로 만드는 방법을 살펴보겠습니다.
 
-11. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab02.md](AuroraLab02.md)
+12. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab02.md](AuroraLab02.md)
