@@ -68,9 +68,9 @@
 
 ## Backtrack
 
-**Backtrack 기능을 사용하면 사용자의 실수에 의한 Data 삭제나 Table Drop을 복구 가능**
+**Backtrack 기능을 사용하면 사용자의 실수에 의한 Data 삭제나 Table Drop에 의해 유실 된 Data 복구 가능**
 
-1.  Aurora MySQL에 접속 후 현재 Timestamp를 확인 후 10초 후 Data를 Delete하고 다시 Timestamp를 확인 합니다.
+1.  Aurora MySQL에 접속 후 현재 Data를 확인하고 현재 시간을 확인합니다.
 
 ```
 ubuntu@ip-172-31-0-183:~$  mysql -h$DBURL -u$DBUSER -p"$DBPASS"
@@ -114,6 +114,9 @@ mysql> SELECT current_timestamp();
 +---------------------+
 1 row in set (0.00 sec)
 
+```
+
+```
 mysql> SELECT 'Before', SLEEP(10), 'AFTER';
 +--------+-----------+-------+
 | Before | SLEEP(10) | AFTER |
