@@ -6,7 +6,7 @@
 
    <kbd> ![GitHub Logo](images/54.png) </kbd>
 
-3. Services => RDS => Databases, clone-fin-cluster, uat-cluster를 삭제합니다.
+3. Services => RDS => Databases, clone-finance-cluster, uat-cluster를 삭제합니다.
 
    <kbd> ![GitHub Logo](images/50.png) </kbd>
 
@@ -15,3 +15,5 @@
 4. Services => CloudFormation => auroralab 선택 후 Delete
 
    <kbd> ![GitHub Logo](images/52.png) </kbd>
+
+5. CloudFormation에서 auroralab Stack이 사라짐을 확인합니다.
