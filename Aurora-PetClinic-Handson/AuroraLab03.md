@@ -132,14 +132,18 @@ INSERT IGNORE INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
 INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
 ```
 
-3. petclinic DB를 생성하는 script를 실행합니다. `mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql`
+3. petclinic DB를 생성하는 script를 실행합니다.
+
+```
+mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
+```
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
 
-4. 신규 생성된 petclinic user를 이용하여 petclinic DB가 정상적으로 생성되었는지 확인합니다.
+1. 신규 생성된 petclinic user를 이용하여 petclinic DB가 정상적으로 생성되었는지 확인합니다.
 
 ```
 mysql -h$DBURL -upetclinic -ppetclinic -e "show databases"
