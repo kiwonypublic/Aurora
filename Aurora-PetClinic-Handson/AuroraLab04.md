@@ -116,6 +116,8 @@ mysql> SELECT current_timestamp();
 
 ```
 
+2. 10초 정도 후에 사용자 실수에 의해 Data가 삭제되는 상황을 만들어 보겠습니다. PETS Table의 일부 Data를 삭제 합니다.
+
 ```
 mysql> SELECT 'Before', SLEEP(10), 'AFTER';
 +--------+-----------+-------+
@@ -138,16 +140,18 @@ mysql>  SELECT current_timestamp();
 | 2021-03-22 14:13:57 |
 +---------------------+
 1 row in set (0.00 sec)
+
+mysql> exit
 ```
 
-2. PetClinic Application을 기동하고 Pets항목을 조회
+3. PetClinic Application을 기동하고 Pets항목을 조회하여 사용자 실수로 인해 Data가 유실된 것을 확인 합니다.
 
 ```
 ubuntu@ip-172-31-0-183:~$ cd spring-petclinic/
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 ```
 
-3. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Onwers 11,12,13의 Pets 항목이 모두 삭제 된것을 확인)
+4. PetClinic Application에 접속해서 아까 입력한 PET Data들이 보ㅈ는지 확인합니다. http://EC2-Public-IP:8080. (Onwers 11,12,13의 Pets 항목이 모두 삭제 된것을 확인)
 
    <kbd> ![GitHub Logo](images/32.png) </kbd>
 
@@ -155,9 +159,9 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 
    <kbd> ![GitHub Logo](images/34.png) </kbd>
 
-4. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+5. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
-5. Backtrack을 사용하여 Pets 데이터가 삭제 되기 이전 상태로 DB를 되돌립니다.
+6. Backtrack을 사용하여 Pets 데이터가 삭제 되기 이전 상태로 DB를 되돌립니다. Timestamp를 Delete 하기전 확인 했던 시간으로 지정합니다.
 
 ```
 aws rds backtrack-db-cluster \
@@ -177,7 +181,14 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
 "
 ```
 
-6. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 몇 분 정도 소요됩니다.)
+7. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 몇 분 정도 소요됩니다.)
+
+```
+aws rds describe-db-clusters \
+--db-cluster-identifier auroralab-mysql-cluster \
+| jq -r '.DBClusters[0].Status'
+
+```
 
 ```
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds describe-db-clusters \
