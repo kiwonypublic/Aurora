@@ -179,7 +179,15 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 6. petclinic user를 이용하여 schema와 Table을 생성합니다.
 
 ```
+mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
+
+mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "show tables"
+
+```
+
+```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
+
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "show tables"
 mysql: [Warning] Using a password on the command line interface can be insecure.
