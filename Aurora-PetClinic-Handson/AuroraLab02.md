@@ -84,26 +84,24 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $
 12. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>
 
-. "Find OWNERS"를 Click 후 "Add Owner"를 Click하여 신규 고객 정보를 입력합니다. (Data는 내장 H2 DB에 저장됩니다.)
-<kbd> ![GitHub Logo](images/11.png) </kbd>
+13. "Find OWNERS"를 Click 후 "Add Owner"를 Click하여 신규 고객 정보를 입력합니다. (Data는 내장 H2 DB에 저장됩니다.)
+    <kbd> ![GitHub Logo](images/11.png) </kbd>
 
-13. 신규 고객의 신규 Pet 정보를 입력 합니다. "Add New Pet"을 Click 합니다.
+14. 신규 고객의 신규 Pet 정보를 입력 합니다. "Add New Pet"을 Click 합니다.
     <kbd> ![GitHub Logo](images/12.png) </kbd>
-
 
     <kbd> ![GitHub Logo](images/13.png) </kbd>
 
-14. "FIND OWNERS"를 Click 후 방금 입력한 신규 사용자 정보를 검색합니다.
+15. "FIND OWNERS"를 Click 후 방금 입력한 신규 사용자 정보를 검색합니다.
     <kbd> ![GitHub Logo](images/14.png) </kbd>
-
 
     <kbd> ![GitHub Logo](images/15.png) </kbd>
 
-15. 이제 다음 챕터에서 PetClinic에서 사용하는 DB를 내장 H2 DB에서 Aurora MySQL DB로 변경하도록 하겠습니다.
+16. 이제 다음 챕터에서 PetClinic에서 사용하는 DB를 내장 H2 DB에서 Aurora MySQL DB로 변경하도록 하겠습니다.
 
-16. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+17. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
 **앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
 **Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
 
-17. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)
+18. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)
