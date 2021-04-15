@@ -181,7 +181,7 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
 "
 ```
 
-7. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 몇 분 정도 소요됩니다.)
+7. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 1-2 분 정도 소요됩니다.)
 
 ```
 while true
@@ -204,7 +204,7 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds describe-db-clusters --db-clu
 available
 ```
 
-7. Pets Table의 Data가 복구 됐는지 DB에서 확인
+8. Pets Table의 실수로 삭제 된 Data가 복구 됐는지 DB에서 확인합니다.
 
 ```
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" petclinic -e "select id, name, type_id from pets where owner_id in (11,12,13);"
@@ -219,7 +219,7 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 +----+-------------------+---------+
 ```
 
-8. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Pets 항목이 모두 복구 된것을 확인)
+9. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Pets 항목이 모두 복구 된것을 확인)
 
 ```
 ubuntu@ip-172-31-0-183:~$ cd spring-petclinic/
@@ -232,6 +232,6 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 
 <kbd> ![GitHub Logo](images/37.png) </kbd>
 
-9. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+10. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
-10. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab05.md](AuroraLab05.md)
+11. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab05.md](AuroraLab05.md)
