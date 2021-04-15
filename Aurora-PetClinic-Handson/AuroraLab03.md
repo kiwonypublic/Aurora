@@ -258,7 +258,7 @@ spring.datasource.password=petclinic
 ```
 
 ```
-ubuntu@ip-172-31-0-6:~/spring-petclinic$ echo '
+ubuntu@ip-172-31-0-145:~/spring-petclinic$ echo '
 > spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 > spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.ap-northeast-2.rds.amazonaws.com:3306/petclinic
 > spring.datasource.username=petclinic
