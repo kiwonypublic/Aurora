@@ -184,9 +184,13 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
 7. Backtrack 상태를 아래의 command로 조회합니다. available 상태가 될때까지 기다립니다. (BackTrack을 위해 몇 분 정도 소요됩니다.)
 
 ```
+while true
+do
 aws rds describe-db-clusters \
 --db-cluster-identifier auroralab-mysql-cluster \
 | jq -r '.DBClusters[0].Status'
+sleep 5;
+done
 
 ```
 
