@@ -332,6 +332,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profi
 ```
 
 11. Application 접속하여 정상 동작을 확인하고 DB Data를 확인합니다. http://EC2-Public-IP:8080
+
     <kbd> ![GitHub Logo](images/16.png) </kbd>
 
 내장 H2 DB에 저장했던 최초 Owner Data와 Pet Data가 없음을 확인합니다. PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.
