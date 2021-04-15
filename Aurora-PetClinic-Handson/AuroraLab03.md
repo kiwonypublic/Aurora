@@ -234,7 +234,7 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
 
-7. backup configuration files
+8. spring boot의 configuration file을 backup 해둡니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ cd ~/spring-petclinic/
