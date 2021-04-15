@@ -204,7 +204,13 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 +---------------------+
 ```
 
-6. petclinic user를 이용하여 data를 입력합니다.
+7. petclinic user를 이용하여 data를 입력하고 확인합니다.
+
+```
+mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
+
+mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "select first_name from owners order by 1"
+```
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
