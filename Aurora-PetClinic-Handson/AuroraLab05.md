@@ -36,24 +36,32 @@ done
 
 <kbd> ![GitHub Logo](images/43.png) </kbd>
 
-7. Aurora DB를 장애 상황을 가정하고 Failover 실행. Services => RDS => Databases
+7. Aurora DB를 장애 상황을 가정하고 Failover 실행합니다. Services => RDS => Databases
 
-8. Primary node인 auroralab-mysql-node-1을 선택 후, Actions => "Failover" Click
+8. Primary node(Current Writer)인 auroralab-mysql-node-1을 선택 후, Actions => "Failover" Click
+
    <kbd> ![GitHub Logo](images/44.png) </kbd>
 
 9. Failover Click
+
    <kbd> ![GitHub Logo](images/45.png) </kbd>
 
-10. Cluster에서 Failover 가 동작 확인
+10. Cluster에서 Failover 가 동작 확인합니다.
+
     <kbd> ![GitHub Logo](images/46.png) </kbd>
 
-11. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인
+11. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인합니다.
+
     <kbd> ![GitHub Logo](images/47.png) </kbd>
 
-12. auroralab-mysql-reader1 이 Write 역할로 Failover
+12. auroralab-mysql-node2가 Writer 역할로 Failover되었음을 확인합니다.
+
     <kbd> ![GitHub Logo](images/48.png) </kbd>
 
-13. PetClinic application 정상 동작 확인
+13. Failover 후에도 PetClinic application 정상 동작 확인합니다.
+
     <kbd> ![GitHub Logo](images/49.png) </kbd>
 
-14. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab06.md](AuroraLab06.md)
+14. 이로써 Aurora Database 안전하고 빠른 Failover 기능을 확인하였습니다.
+
+15. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab06.md](AuroraLab06.md)
