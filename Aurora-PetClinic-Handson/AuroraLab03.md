@@ -20,8 +20,9 @@ ALTER DATABASE petclinic
   DEFAULT COLLATE utf8_general_ci;
 
 GRANT ALL PRIVILEGES ON petclinic.* TO 'petclinic'@'%' IDENTIFIED BY 'petclinic';
+```
 
-
+```
 ubuntu@ip-172-31-0-6:~/spring-petclinic/src/main/resources/db/mysql$ cat schema.sql
 CREATE TABLE IF NOT EXISTS vets (
   id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -78,8 +79,9 @@ CREATE TABLE IF NOT EXISTS visits (
   description VARCHAR(255),
   FOREIGN KEY (pet_id) REFERENCES pets(id)
 ) engine=InnoDB;
+```
 
-
+```
 ubuntu@ip-172-31-0-6:~/spring-petclinic/src/main/resources/db/mysql$ cat data.sql
 INSERT IGNORE INTO vets VALUES (1, 'James', 'Carter');
 INSERT IGNORE INTO vets VALUES (2, 'Helen', 'Leary');
