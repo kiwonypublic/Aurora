@@ -27,6 +27,8 @@
 
 7. Stack 생성을 기다리면서 RDS Aurora를 수동으로 만드는 방법을 살펴 보겠습니다.
 
+7-1. 첫번째 Writer Instance가 생성되었으면 AuroraLab02.md로 넘어가서 다음 작업을 사전에 준비합니다.
+
 8. 아래 화면처럼 Stack Resource가 "CREATE_COMPLETE"가 되면 환경 구성이 완료된 것입니다.
 
 <kbd> ![GitHub Logo](images/4.png) </kbd>
