@@ -1,4 +1,6 @@
-# Session Manager를 이용해서 EC2 인스턴스에 접속
+# SpringBoot PetClinic을 설치 후 접속하여 Data를 입력 해봅니다.
+
+### Session Manager를 이용해서 EC2 인스턴스에 접속
 
 1. 다음의 주소를 복사해서 Browser의 새 창에 Copy and Paste합니다.
 
