@@ -17,6 +17,7 @@
 `https://ap-northeast-2.console.aws.amazon.com/systems-manager/session-manager?region=ap-northeast-2`
 
 4.  auroralab-mysql-workstation 선택 후 "Start Session" click
+
     <kbd> ![GitHub Logo](images/42.png) </kbd>
 
 5.  curl을 이용하여 PetClinic API를 계속 호출
