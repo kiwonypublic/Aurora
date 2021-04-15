@@ -12,8 +12,9 @@
 
     <kbd> ![GitHub Logo](images/40.png) </kbd>
 
-3.  Session Manager를 하나 더 시작. Services => System Manager => Session Manager => "Start session" click
-    <kbd> ![GitHub Logo](images/41.png) </kbd>
+3.  다음의 주소를 복사해서 Browser의 새 창에 Copy and Paste합니다. System Manager를 2개를 이용하기 위함입니다.
+
+`https://ap-northeast-2.console.aws.amazon.com/systems-manager/session-manager?region=ap-northeast-2`
 
 4.  auroralab-mysql-workstation 선택 후 "Start Session" click
     <kbd> ![GitHub Logo](images/42.png) </kbd>
