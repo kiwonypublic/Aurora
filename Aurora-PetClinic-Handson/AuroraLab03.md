@@ -321,7 +321,7 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
 <       <groupId>org.mariadb.jdbc</groupId>
 <       <artifactId>mariadb-java-client</artifactId>
 <       <version>2.5.4</version>
-<     </dependency
+<     </dependency>
 ```
 
 10. Package를 다시 Rebuild해서 PetClinic이 Local H2 DB대신 Aurora MySQL 을 사용하도록 합니다. 이후 Application을 실행합니다.
