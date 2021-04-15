@@ -285,7 +285,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 9. edit pom.xml
 
 ~/spring-petclinic/pom.xml에 `<!-- cahcing -->` 위에 아래 5줄을 추가합니다.
-**vi에 익숙하지 않으시면 9-1로 갑니다.**
+
+**vi에 익숙하지 않으시면 9번 Step 대신 9-1을 실행합니다.**
 
 ```
     <dependency>
