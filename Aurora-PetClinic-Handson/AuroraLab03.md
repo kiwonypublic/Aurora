@@ -337,9 +337,9 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profi
 
 LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
-LAB02에서 입력 했던 Data는 Local H2 DB에 저장되었었고, 현재는 Aurora MySQL로 연결되었기 때문입니다.
+**LAB02에서 입력 했던 Data는 Local H2 DB에 저장되었었고, 현재는 Aurora MySQL로 연결되었기 때문입니다.**
 
-PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.
+**PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.**
 
 12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
     <kbd> ![GitHub Logo](images/17.png) </kbd>
