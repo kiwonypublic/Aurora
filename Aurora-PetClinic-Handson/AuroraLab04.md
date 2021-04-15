@@ -28,9 +28,11 @@
 
 5. Restore Snapshot
 
+```
    1. DB Instance identifier : UAT
    2. 나머지는 Default value 사용
    3. "Restore DB Cluster" Click
+```
 
 6. UAT Cluster와 DB가 생성되는 것을 확인 합니다. 이제 개발 팀에서 10분후에 UAT System을 이용하여 개발을 시작 할 수 있습니다.
 
