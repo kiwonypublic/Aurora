@@ -78,7 +78,6 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $1 "\n" }'
 52.79.61.11
-ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar
 
 ```
 
