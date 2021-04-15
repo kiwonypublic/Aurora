@@ -250,19 +250,22 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp src/main/resources/application.pro
 
 **실행 Command**
 
-```
+**실행 Command**```
 echo '
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.ap-northeast-2.rds.amazonaws.com:3306/petclinic
 spring.datasource.username=petclinic
 spring.datasource.password=petclinic
 ' >> ~/spring-petclinic/src/main/resources/application.properties
+
 ```
 
 **실행 Example**
 
 ```
+
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ echo '
+
 > spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 > spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.ap-northeast-2.rds.amazonaws.com:3306/petclinic
 > spring.datasource.username=petclinic
@@ -271,11 +274,12 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ echo '
 
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties src/main/resources/application.properties
 25a26,30
->
+
 > spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 > spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.ap-northeast-2.rds.amazonaws.com:3306/petclinic
 > spring.datasource.username=petclinic
 > spring.datasource.password=petclinic
+
 ```
 
 9. edit pom.xml
@@ -283,32 +287,38 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 ~/spring-petclinic/pom.xml에 `<!-- cahcing -->` 위에 아래 5줄을 추가합니다.
 
 ```
+
     <dependency>
       <groupId>org.mariadb.jdbc</groupId>
       <artifactId>mariadb-java-client</artifactId>
       <version>2.5.4</version>
     </dependency>
+
 ```
 
 <kbd> ![GitHub Logo](images/24.png) </kbd>
 
 ```
+
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ vi pom.xml
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 84a85,90
+
 >     <dependency>
 >       <groupId>org.mariadb.jdbc</groupId>
 >       <artifactId>mariadb-java-client</artifactId>
 >       <version>2.5.4</version>
 >     </dependency>
->
+
 ```
 
 10. rebuild and run application
 
 ```
+
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
-ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profiles.active=mysql
+ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/\*.jar -Dspring.profiles.active=mysql
+
 ```
 
 11. Application 접속 및 DB 내용 확인 http://EC2-Public-IP:8080
@@ -328,33 +338,35 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profi
 13. Aurora MySQL에 접속하여 입력한 정보들이 DB에 저장되었는지 확인 합니다.
 
 ```
+
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ mysql -h$DBURL -upetclinic -ppetclinic
 mysql> use petclinic;
 mysql> select id,first_name,last_name from owners order by 1;
 +----+------------+-----------+
 | id | first_name | last_name |
 +----+------------+-----------+
-|  1 | George     | Franklin  |
-|  2 | Betty      | Davis     |
-|  3 | Eduardo    | Rodriquez |
-|  4 | Harold     | Davis     |
-|  5 | Peter      | McTavish  |
-|  6 | Jean       | Coleman   |
-|  7 | Jeff       | Black     |
-|  8 | Maria      | Escobito  |
-|  9 | David      | Schroeder |
-| 10 | Carlos     | Estaban   |
-| 11 | aurora     | mysql     |
+| 1 | George | Franklin |
+| 2 | Betty | Davis |
+| 3 | Eduardo | Rodriquez |
+| 4 | Harold | Davis |
+| 5 | Peter | McTavish |
+| 6 | Jean | Coleman |
+| 7 | Jeff | Black |
+| 8 | Maria | Escobito |
+| 9 | David | Schroeder |
+| 10 | Carlos | Estaban |
+| 11 | aurora | mysql |
 +----+------------+-----------+
 11 rows in set (0.01 sec)
 
 mysql> select id, name, type_id from pets where owner_id=11;
 +----+----------------+---------+
-| id | name           | type_id |
+| id | name | type_id |
 +----+----------------+---------+
-| 14 | RDS-Aurora-DOG |       2 |
+| 14 | RDS-Aurora-DOG | 2 |
 +----+----------------+---------+
 1 row in set (0.00 sec)
+
 ```
 
 14. 몇개의 Data를 추가로 넣고 DB에서 조회해 봅니다.
@@ -364,3 +376,4 @@ mysql> select id, name, type_id from pets where owner_id=11;
 15. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
 16. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab04.md](AuroraLab04.md)
+```
