@@ -52,9 +52,11 @@
 
 2. Create Clone
 
+```
    1. DB instance identifier : clone-fin
    2. 나머지는 Default value 사용
    3. "Create clone" click
+```
 
 3. clone-fin-cluster가 생성되는 것을 확인합니다.
 
