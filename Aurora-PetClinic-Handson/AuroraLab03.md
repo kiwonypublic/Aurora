@@ -281,6 +281,8 @@ spring.datasource.url=jdbc:mysql://auroralab-mysql-cluster.cluster-cn9obtetnzbc.
 spring.datasource.username=petclinic
 spring.datasource.password=petclinic
 ' >> ~/spring-petclinic/src/main/resources/application.properties
+
+diff ~/backup/application.properties src/main/resources/application.properties
 ```
 
 > > **Command 실행 결과 예제**
