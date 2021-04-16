@@ -65,21 +65,20 @@ ubuntu@ip-172-31-0-217:~$ cd spring-petclinic/
 ubuntu@ip-172-31-0-217:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
 ```
 
-10. PetClinic Application을 기동합니다.
+10. EC2의 Public IP 를 확인하고, PetClinic application을 실행 후 접속 테스트를 진행합니다.(EC2 IP를 메모장에 복사해둡니다.)
+
+```
+ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $1 "\n" }'
+52.79.61.11
+```
+
+11. PetClinic Application을 기동합니다.
 
 ```
 ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 ```
 
 <kbd> ![GitHub Logo](images/53.png) </kbd>
-
-11. EC2의 Public IP 를 확인하고, PetClinic application을 실행 후 접속 테스트를 진행합니다.(EC2 IP를 메모장에 복사해둡니다.)
-
-```
-ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $1 "\n" }'
-52.79.61.11
-
-```
 
 12. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>
