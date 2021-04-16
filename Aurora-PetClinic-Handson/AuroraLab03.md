@@ -148,7 +148,7 @@ INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
 mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
 ```
 
-**Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
