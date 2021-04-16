@@ -155,13 +155,8 @@ Query OK, 4 rows affected (0.03 sec)
 mysql> commit;
 Query OK, 0 rows affected (0.00 sec)
 
-mysql>  SELECT current_timestamp();
-+---------------------+
-| current_timestamp() |
-+---------------------+
-| 2021-03-22 14:13:57 |
-+---------------------+
-1 row in set (0.00 sec)
+mysql> select id, name, type_id from pets where owner_id in (11,12,13);
+Empty set (0.00 sec)
 
 mysql> exit
 ```
