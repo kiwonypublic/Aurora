@@ -6,10 +6,14 @@
 
 ---
 
-1. 오늘 LAB에서는 Spring Boot의 PetClinic Web Application을 사용합니다. PetClinic은 Java Application과 내장 H2 Database를 사용하게 됩니다.
+1. 오늘 LAB에서는 Spring Boot의 PetClinic Web Application을 사용합니다. PetClinic을 방문하는 고객과 고객의 Pet정보를 기록하는 간단한 Application입니다.
 
 <kbd> ![GitHub Logo](images/10.png) </kbd>
 
+2. PetClinic의 기본 Architecture는 다음과 같습니다.
+
 <kbd> ![GitHub Logo](images/55.png) </kbd>
+
+3. 내장 H2 Database를 대신하여 신뢰성 높은 Aurora DB를 생성하고 Application에서 사용하도록 하겠습니다.
 
 <kbd> ![GitHub Logo](images/56.png) </kbd>
