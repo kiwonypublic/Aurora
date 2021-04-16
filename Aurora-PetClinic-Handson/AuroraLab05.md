@@ -74,7 +74,7 @@ done
 
 ---
 
-10. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인합니다.
+10. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 약 1~20초 이내에 Failover 됨을 확인합니다.
 
     <kbd> ![GitHub Logo](images/47.png) </kbd>
 
