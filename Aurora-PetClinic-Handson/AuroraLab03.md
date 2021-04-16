@@ -270,7 +270,11 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp src/main/resources/application.pro
 
 9. Configuration File을 환경에 맞게 수정합니다.
 
-~/spring-petclinic/src/main/resources/application.properties 파일에 아래 4 line을 추가합니다.(datasource.url을 환경에 맞게 변경해서 입력)
+~/spring-petclinic/src/main/resources/application.properties 파일에 아래 4 line을 추가합니다.
+
+```
+spring.datasource.urㅇ의 JDBC URL을 CloudFormation Stack Output에서 복사 해둔 clusterEndpoint로 변경합니다.
+```
 
 **실행 Command**
 
