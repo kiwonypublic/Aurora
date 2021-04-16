@@ -78,8 +78,6 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $
 ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 ```
 
-<kbd> ![GitHub Logo](images/53.png) </kbd>
-
 12. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>
 
