@@ -190,11 +190,17 @@ ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 
 6. Backtrack을 사용하여 Pets 데이터가 삭제 되기 이전 상태로 DB를 되돌립니다. Timestamp를 Delete 하기전 확인 했던 시간으로 지정합니다.
 
+**실행 Command**
+
 ```
 aws rds backtrack-db-cluster \
 --db-cluster-identifier auroralab-mysql-cluster \
 --backtrack-to "2021-03-22T14:13:37Z
+```
 
+> > **Command 실행 결과 예제**
+
+```
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ aws rds backtrack-db-cluster \
 > --db-cluster-identifier auroralab-mysql-cluster \
 > --backtrack-to "2021-03-22T14:13:37Z"
