@@ -166,19 +166,21 @@ mysql> exit
 3. PetClinic Application을 기동하고 Pets항목을 조회하여 사용자 실수로 인해 Data가 유실된 것을 확인 합니다.
 
 ```
-ubuntu@ip-172-31-0-183:~$ cd spring-petclinic/
+ubuntu@ip-172-31-0-183:~$ cd ~/spring-petclinic/
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 ```
 
 ---
 
-4. PetClinic Application에 접속해서 아까 입력한 PET Data들이 보ㅈ는지 확인합니다. http://EC2-Public-IP:8080. (Onwers 11,12,13의 Pets 항목이 모두 삭제 된것을 확인)
+4. PetClinic Application에 접속해서 아까 입력한 PET Data들이 보이는지 확인합니다. (http://EC2-Public-IP:8080)
 
-   <kbd> ![GitHub Logo](images/32.png) </kbd>
+**고객들의 정보는 검색되지만, 고객들의 Pet 정보들은 delete에 의해서 삭제되어 보이지 않습니다.**
 
-   <kbd> ![GitHub Logo](images/33.png) </kbd>
+<kbd> ![GitHub Logo](images/32.png) </kbd>
 
-   <kbd> ![GitHub Logo](images/34.png) </kbd>
+<kbd> ![GitHub Logo](images/33.png) </kbd>
+
+<kbd> ![GitHub Logo](images/34.png) </kbd>
 
 ---
 
