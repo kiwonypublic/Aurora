@@ -10,7 +10,7 @@
 
 ---
 
-2.  Role이 Reader인 auroralab-mysql-reader2를 확인합니다.
+2.  Role이 Reader인 DB Instance를 확인합니다. Failover후에 Writer와 Reader가 역할 변경됩니다.
 
     <kbd> ![GitHub Logo](images/40.png) </kbd>
 
