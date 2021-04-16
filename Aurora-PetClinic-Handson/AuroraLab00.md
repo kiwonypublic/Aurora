@@ -4,6 +4,10 @@
 
 > > 클릭하여 LAB01로 이동해주세요.[AuroraLab01.md](AuroraLab01.md)
 
+1. 오늘 LAB에서는 Spring Boot의 PetClinic Web Application을 사용합니다. PetClinic은 Java Application과 내장 H2 Database를 사용하게 됩니다.
+
+<kbd> ![GitHub Logo](images/10.png) </kbd>
+
 <kbd> ![GitHub Logo](images/55.png) </kbd>
 
 <kbd> ![GitHub Logo](images/56.png) </kbd>
