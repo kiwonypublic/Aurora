@@ -172,6 +172,8 @@ mysql -h$DBURL -u$DBUSER -p"$DBPASS" -e "GRANT SELECT, INSERT, UPDATE, DELETE, C
 
 ```
 
+**Command 실행 결과 예제**
+
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic -e "show databases"
 mysql: [Warning] Using a password on the command line interface can be insecure.
