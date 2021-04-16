@@ -29,20 +29,21 @@
 4-2. auroralab-mysql-workstation 선택 후 "Start Session" click
 
 <kbd> ![GitHub Logo](images/7.png) </kbd>
-<kbd> ![GitHub Logo](images/42.png) </kbd>
 
 ---
 
 5.  curl을 이용하여 PetClinic의 Owner 정보 요청 API를 계속 호출합니다. IP는 앞에서 확인한 EC2 Public IP로 변환해서 실행합니다.
 
 ```
-curl http://52.78.88.109:8080/owners/13
+sudo su -l ubuntu
+
+curl http://52.78.88.109:8080/owners/11
 ```
 
 ```
 while true
 do
-curl -Is http://13.125.117.181:8080/owners/13 | grep -E 'HTTP|Date'
+curl -Is http://13.125.117.181:8080/owners/11 | grep -E 'HTTP|Date'
 sleep 1
 done
 ```
