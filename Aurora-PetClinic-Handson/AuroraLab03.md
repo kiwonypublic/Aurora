@@ -148,7 +148,7 @@ INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
 mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
 ```
 
-> **Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" < user.sql
@@ -172,7 +172,7 @@ mysql -h$DBURL -u$DBUSER -p"$DBPASS" -e "GRANT SELECT, INSERT, UPDATE, DELETE, C
 
 ```
 
-**Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic -e "show databases"
@@ -199,7 +199,7 @@ mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "show tables"
 
 ```
 
-**Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
@@ -230,7 +230,7 @@ mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
 mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "select first_name from owners order by 1"
 ```
 
-**Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
@@ -283,7 +283,7 @@ spring.datasource.password=petclinic
 ' >> ~/spring-petclinic/src/main/resources/application.properties
 ```
 
-**Command 실행 결과 예제**
+> > **Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ echo '
