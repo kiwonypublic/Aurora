@@ -337,7 +337,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 10-1. 이미 수정되어 있는 pom.xml을 다운로드 받습니다.
 
 ```
-ubuntu@ip-172-31-0-6:~/spring-petclinic$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/pom.xml -O
+ubuntu@ip-172-31-0-6:~/spring-petclinic$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/pom.xml -O pom.xml
 
 ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
 84,88d83
