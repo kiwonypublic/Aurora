@@ -24,7 +24,7 @@
 
 ---
 
-3. Snapshot status가 "Available" 가 되면 해당 Snapshot을 이용하여 다양한 용도로 사용 가능합니다. Snapshot 생성 완료 때까지 Auto/Manual Snapshot의 차이를 알아봅니다.
+3. Snapshot status가 "Available" 가 되면 해당 Snapshot을 이용하여 다양한 용도로 사용 가능합니다. Snapshot 생성 완료 때까지 Snapshot Menu들을 확인합니다.
 
    <kbd> ![GitHub Logo](images/26.png) </kbd>
 
