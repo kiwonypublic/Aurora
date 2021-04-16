@@ -22,9 +22,14 @@
 
 ---
 
-4.  auroralab-mysql-workstation 선택 후 "Start Session" click
+4-1. "Start Session"을 Click
 
-    <kbd> ![GitHub Logo](images/42.png) </kbd>
+<kbd> ![GitHub Logo](images/6.png) </kbd>
+
+4-2. auroralab-mysql-workstation 선택 후 "Start Session" click
+
+<kbd> ![GitHub Logo](images/7.png) </kbd>
+<kbd> ![GitHub Logo](images/42.png) </kbd>
 
 ---
 
