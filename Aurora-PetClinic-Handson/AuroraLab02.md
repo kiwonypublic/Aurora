@@ -31,6 +31,8 @@ DBPASS=tbU642-*Y.
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 ```
 
+---
+
 7. mysql client를 사용해서 aurora instance로 접속을 확인합니다. [clusterEndpoint]는 Lab01에서 복사해둔 CloudFormation Output에서 확인 할 수 있습니다. select query를 통해 정상적으로 접속되는지 확인합니다. (clusterEndpoint를 따로 메모장에 복사합니다)
 
 ```
@@ -45,9 +47,10 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
 
-**COMMAND & Output Example**
-
+**Command 실행 결과 예제**
 <kbd> ![GitHub Logo](images/9.png) </kbd>
+
+---
 
 8. Install JDK 11 - spring
 
@@ -65,6 +68,8 @@ ubuntu@ip-172-31-0-217:~$ cd spring-petclinic/
 ubuntu@ip-172-31-0-217:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
 ```
 
+---
+
 10. EC2의 Public IP 를 확인하고, PetClinic application을 실행 후 접속 테스트를 진행합니다.(EC2 IP를 메모장에 복사해둡니다.)
 
 ```
@@ -72,11 +77,15 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ curl -s ifconfig.me | awk ' { print $
 52.79.61.11
 ```
 
+---
+
 11. PetClinic Application을 기동합니다.
 
 ```
 ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 ```
+
+---
 
 12. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>

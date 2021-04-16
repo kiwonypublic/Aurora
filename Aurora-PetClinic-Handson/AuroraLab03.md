@@ -176,6 +176,8 @@ ubuntu@ip-172-31-0-145:~$ mysql -h$DBURL -u$DBUSER -p"$DBPASS" -e "GRANT SELECT,
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
 
+---
+
 6. petclinic user를 이용하여 schema와 Table을 생성합니다.
 
 ```
@@ -184,6 +186,8 @@ mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
 mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "show tables"
 
 ```
+
+**Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <schema.sql
@@ -204,6 +208,8 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 +---------------------+
 ```
 
+---
+
 7. petclinic user를 이용하여 data를 입력하고 확인합니다.
 
 ```
@@ -211,6 +217,8 @@ mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
 
 mysql -h$DBURL -upetclinic -ppetclinic petclinic -e "select first_name from owners order by 1"
 ```
+
+**Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$DBURL -upetclinic -ppetclinic petclinic <data.sql
@@ -233,6 +241,8 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 +------------+
 
 ```
+
+---
 
 8. spring boot의 configuration file을 backup 해둡니다.
 
@@ -261,9 +271,7 @@ spring.datasource.password=petclinic
 ' >> ~/spring-petclinic/src/main/resources/application.properties
 ```
 
----
-
-**실행 Example**
+**Command 실행 결과 예제**
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ echo '
@@ -281,6 +289,8 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 > spring.datasource.username=petclinic
 > spring.datasource.password=petclinic
 ```
+
+---
 
 9. edit pom.xml
 
@@ -324,12 +334,16 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
 <     </dependency>
 ```
 
+---
+
 10. Package를 다시 Rebuild해서 PetClinic이 Local H2 DB대신 Aurora MySQL 을 사용하도록 합니다. 이후 Application을 실행합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profiles.active=mysql
 ```
+
+---
 
 11. Application 접속하여 정상 동작을 확인하고 DB Data를 확인합니다. http://EC2-Public-IP:8080
 
