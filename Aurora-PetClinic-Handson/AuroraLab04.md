@@ -14,10 +14,12 @@
 
 ---
 
-2. auroralab-mysql-node-1 선택 후 Actions => Take Snapshot
+2. auroralab-mysql-cluster instance 중 Role이 "Writer"인 것을 선택 후 Actions => Take Snapshot
 
    <kbd> ![GitHub Logo](images/21.png) </kbd>
+
    <kbd> ![GitHub Logo](images/22.png) </kbd>
+
    <kbd> ![GitHub Logo](images/23.png) </kbd>
 
 ---
