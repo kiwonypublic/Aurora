@@ -6,21 +6,31 @@
 
 `https://ap-northeast-2.console.aws.amazon.com/systems-manager/session-manager?region=ap-northeast-2`
 
+---
+
 2. "Start Session"을 Click
 
 <kbd> ![GitHub Logo](images/6.png) </kbd>
+
+---
 
 3. `auroralab-mysql-workstation`을 선택한 후 "Start Session"을 Click
 
 <kbd> ![GitHub Logo](images/7.png) </kbd>
 
+---
+
 4. Terminal 이 뜨면 `sudo su -l ubuntu`를 통해 ssm-user에서 ubuntu User로 Switching.(항상 ubuntu User로 작업을 해야 합니다.)
 
 <kbd> ![GitHub Logo](images/8.png) </kbd>
 
+---
+
 5. `tail -n1 /debug.log`를 확인하여 다음의 Log를 확인하여 Instance가 정상 기동되었는지 확인
 
 `* bootstrap complete, rebooting`
+
+---
 
 6. `env |grep DB` command를 이용하여 DB master user name과 password를 확인 합니다.
 
@@ -90,24 +100,36 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$  java -jar target/*.jar
 12. Browser에서 http://EC2-PublicIP:8080(ex: http://52.79.61.11:8080) 으로 접속합니다.
     <kbd> ![GitHub Logo](images/10.png) </kbd>
 
+---
+
 13. "Find OWNERS"를 Click 후 "Add Owner"를 Click하여 신규 고객 정보를 입력합니다. (Data는 Default로 Local H2 DB에 저장됩니다.)
     <kbd> ![GitHub Logo](images/11.png) </kbd>
+
+---
 
 14. 신규 고객의 신규 Pet 정보를 입력 합니다. "Add New Pet"을 Click 합니다.
     <kbd> ![GitHub Logo](images/12.png) </kbd>
 
     <kbd> ![GitHub Logo](images/13.png) </kbd>
 
+---
+
 15. "FIND OWNERS"를 Click 후 방금 입력한 신규 사용자 정보를 검색합니다.
     <kbd> ![GitHub Logo](images/14.png) </kbd>
 
     <kbd> ![GitHub Logo](images/15.png) </kbd>
 
+---
+
 16. 이제 다음 챕터에서 PetClinic에서 사용하는 DB를 Local H2 DB에서 Aurora MySQL DB로 변경하도록 하겠습니다.
+
+---
 
 17. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
 
 **앞으로 있을 Terminal 작업은 모두 위의 Session Manager 접속을 통해서 이뤄집니다.**
 **Session Manager가 Timeout되서 Close될 경우 위의 순서로 다시 여시면 됩니다.**
+
+---
 
 18. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab03.md](AuroraLab03.md)

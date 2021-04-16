@@ -9,6 +9,8 @@ data.sql  petclinic_db_setup_mysql.txt  schema.sql  user.sql
 
 ```
 
+---
+
 2. cat으로 user.sql, schema.sql, data.sql을 살펴 봅니다.
 
 ```
@@ -138,6 +140,8 @@ INSERT IGNORE INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
 INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
 ```
 
+---
+
 3. PetClinic DB와 User를 생성하는 script를 실행합니다.
 
 ```
@@ -149,11 +153,15 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic/src/main/resources/db/mysql$ mysql -h$
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
 
+---
+
 4. 신규 생성된 petclinic user를 이용하여 petclinic DB가 정상적으로 생성되었는지 확인합니다.
 
 ```
 mysql -h$DBURL -upetclinic -ppetclinic -e "show databases"
 ```
+
+---
 
 5. petclinic user에게 필요한 권한을 할당합니다.
 
@@ -254,11 +262,11 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp ./pom.xml ~/backup/
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ cp src/main/resources/application.properties ~/backup/
 ```
 
+---
+
 9. Configuration File을 환경에 맞게 수정합니다.
 
 ~/spring-petclinic/src/main/resources/application.properties 파일에 아래 4 line을 추가합니다.(datasource.url을 환경에 맞게 변경해서 입력)
-
----
 
 **실행 Command**
 
@@ -292,11 +300,11 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/application.properties 
 
 ---
 
-9. edit pom.xml
+10. edit pom.xml
 
 ~/spring-petclinic/pom.xml에 `<!-- cahcing -->` 위에 아래 5줄을 추가합니다.
 
-**vi에 익숙하지 않으시면 9번 Step 대신 9-1을 실행합니다.**
+**vi에 익숙하지 않으시면 10번 Step 대신 10-1을 실행합니다.**
 
 ```
     <dependency>
@@ -320,7 +328,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ diff ~/backup/pom.xml ./pom.xml
 >
 ```
 
-9-1. 이미 수정되어 있는 pom.xml을 다운로드 받습니다.
+10-1. 이미 수정되어 있는 pom.xml을 다운로드 받습니다.
 
 ```
 ubuntu@ip-172-31-0-6:~/spring-petclinic$ wget https://shared-kiwony.s3.ap-northeast-2.amazonaws.com/pom.xml -O
@@ -336,7 +344,7 @@ ubuntu@ip-172-31-0-6:~/spring-petclinic$ diff pom.xml ~/backup/pom.xml
 
 ---
 
-10. Package를 다시 Rebuild해서 PetClinic이 Local H2 DB대신 Aurora MySQL 을 사용하도록 합니다. 이후 Application을 실행합니다.
+11. Package를 다시 Rebuild해서 PetClinic이 Local H2 DB대신 Aurora MySQL 을 사용하도록 합니다. 이후 Application을 실행합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ ./mvnw package -Dmaven.test.skip=true
@@ -345,7 +353,7 @@ ubuntu@ip-172-31-0-145:~/spring-petclinic$ java -jar target/*.jar -Dspring.profi
 
 ---
 
-11. Application 접속하여 정상 동작을 확인하고 DB Data를 확인합니다. http://EC2-Public-IP:8080
+12. Application 접속하여 정상 동작을 확인하고 DB Data를 확인합니다. http://EC2-Public-IP:8080
 
     <kbd> ![GitHub Logo](images/16.png) </kbd>
 
@@ -355,7 +363,9 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
 **PetClinic Application은 이제 Aurora MySQL을 Repository로 사용합니다.**
 
-12. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
+---
+
+13. Application에서 신규 Aurora MySQL 로 data를 입력합니다. "Add Owner"를 Click하고 신규 Owner, Pet 정보를 입력합니다.
 
 **(3개의 Onwer과 Owner별 각각의 Pet 정보를 입력합니다.)**
 
@@ -367,9 +377,13 @@ LAB02에서 입력 했던 Owner Data와 Pet Data가 없음을 확인합니다.
 
 <kbd> ![GitHub Logo](images/20.png) </kbd>
 
-13. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+---
 
-14. 새로운 Aurora MySQL에 접속하여 입력한 정보들이 DB에 저장되었는지 확인 합니다.
+14. 현재 실행중인 PetClinic Application을 중지합니다. (CTRL+C)로 실행중인 Java process를 종료합니다.
+
+---
+
+15. 새로운 Aurora MySQL에 접속하여 입력한 정보들이 DB에 저장되었는지 확인 합니다.
 
 ```
 ubuntu@ip-172-31-0-145:~/spring-petclinic$ mysql -h$DBURL -upetclinic -ppetclinic
@@ -407,5 +421,7 @@ mysql> select id, name, type_id from pets where owner_id in (11,12,13);
 ```
 
 <kbd> ![GitHub Logo](images/25.png) </kbd>
+
+---
 
 16. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab04.md](AuroraLab04.md)

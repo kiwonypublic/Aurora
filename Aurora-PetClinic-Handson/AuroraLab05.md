@@ -8,17 +8,25 @@
 
 1.  Services -> RDS -> Databases
 
+---
+
 2.  Role이 Reader인 auroralab-mysql-reader2를 확인합니다.
 
     <kbd> ![GitHub Logo](images/40.png) </kbd>
+
+---
 
 3.  다음의 주소를 복사해서 Browser의 새 창에 Copy and Paste합니다. System Manager를 2개를 이용하기 위함입니다.
 
 `https://ap-northeast-2.console.aws.amazon.com/systems-manager/session-manager?region=ap-northeast-2`
 
+---
+
 4.  auroralab-mysql-workstation 선택 후 "Start Session" click
 
     <kbd> ![GitHub Logo](images/42.png) </kbd>
+
+---
 
 5.  curl을 이용하여 PetClinic의 Owner 정보 요청 API를 계속 호출합니다. IP는 앞에서 확인한 EC2 Public IP로 변환해서 실행합니다.
 
@@ -36,32 +44,50 @@ done
 
 <kbd> ![GitHub Logo](images/43.png) </kbd>
 
-7. Aurora DB를 장애 상황을 가정하고 Failover 실행합니다. Services => RDS => Databases
+---
 
-8. Primary node(Current Writer)인 auroralab-mysql-node-1을 선택 후, Actions => "Failover" Click
+6. Aurora DB를 장애 상황을 가정하고 Failover 실행합니다. Services => RDS => Databases
+
+---
+
+7. Primary node(Current Writer)인 auroralab-mysql-node-1을 선택 후, Actions => "Failover" Click
 
    <kbd> ![GitHub Logo](images/44.png) </kbd>
 
-9. Failover Click
+---
+
+8. Failover Click
 
    <kbd> ![GitHub Logo](images/45.png) </kbd>
 
-10. Cluster에서 Failover 가 동작 확인합니다.
+---
 
-    <kbd> ![GitHub Logo](images/46.png) </kbd>
+9. Cluster에서 Failover 가 동작 확인합니다.
 
-11. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인합니다.
+   <kbd> ![GitHub Logo](images/46.png) </kbd>
+
+---
+
+10. curl을 실행한 Session Manager로 돌아가서 curl status 변화를 확인, 거의 단절 없이 Service 됨을 확인합니다.
 
     <kbd> ![GitHub Logo](images/47.png) </kbd>
 
-12. auroralab-mysql-node2가 Writer 역할로 Failover되었음을 확인합니다.
+---
+
+11. auroralab-mysql-node2가 Writer 역할로 Failover되었음을 확인합니다.
 
     <kbd> ![GitHub Logo](images/48.png) </kbd>
 
-13. Failover 후에도 PetClinic application 정상 동작 확인합니다.
+---
+
+12. Failover 후에도 PetClinic application 정상 동작 확인합니다.
 
     <kbd> ![GitHub Logo](images/49.png) </kbd>
 
-14. 이로써 Aurora Database 안전하고 빠른 Failover 기능을 확인하였습니다.
+---
 
-15. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab06.md](AuroraLab06.md)
+13. 이로써 Aurora Database 안전하고 빠른 Failover 기능을 확인하였습니다.
+
+---
+
+14. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab06.md](AuroraLab06.md)
