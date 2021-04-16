@@ -90,7 +90,7 @@
 
 **Backtrack 기능을 사용하면 사용자의 실수에 의한 Data 삭제나 Table Drop에 의해 유실 된 Data 복구 가능**
 
-1.  Aurora MySQL에 접속 후 현재 Data를 확인하고 현재 시간을 확인합니다.
+1.  Aurora MySQL에 접속 후 현재 Data를 확인하고 현재 시간을 확인합니다. Data 삭제 전의 시간을 메모장에 기록해둡니다.
 
 ```
 ubuntu@ip-172-31-0-183:~$  mysql -h$DBURL -u$DBUSER -p"$DBPASS"
@@ -261,7 +261,7 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 9. PetClinic 접속 Pets 항목 확인 http://EC2-Public-IP:8080. (Pets 항목이 모두 복구 된것을 확인)
 
 ```
-ubuntu@ip-172-31-0-183:~$ cd spring-petclinic/
+ubuntu@ip-172-31-0-183:~$ cd ~/spring-petclinic/
 ubuntu@ip-172-31-0-183:~/spring-petclinic$ java -jar target/*.jar
 ```
 
