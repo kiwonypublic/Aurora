@@ -17,3 +17,5 @@
 3. 내장 H2 Database를 대신하여 신뢰성 높은 Aurora DB를 생성하고 Application에서 사용하도록 하겠습니다.
 
 <kbd> ![GitHub Logo](images/56.png) </kbd>
+
+4. 수고하셨습니다. 다음 챕터로 이동하세요. [AuroraLab01.md](AuroraLab01.md)
